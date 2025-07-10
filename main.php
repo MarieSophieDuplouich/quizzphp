@@ -1,6 +1,13 @@
 <?php
 $questions = [
-    "Quelle est la couleur du cheval blanc d'Henri IV?2\n1.Blanc\n2.Rouge\n3.Noir\n",
+    "###################################################
+######## Qui veux gagner des millions ?! ##########
+###################################################
+
+###################################################
+Score : 0
+###################################################
+Quelle est la couleur du cheval blanc d'Henri IV?\n1.Blanc\n2.Rouge\n3.Noir\n",
     "Date de la prise de la Bastille ?\n1.1750\n2.1789\n3.1800\n",
     "Quel est le plus grand océan du monde ?\n1.Océan Atlantique\n2.Océan Indien\n3.Océan Pacifique\n",
     "Qui a écrit Les Misérables ?\n1.Victor Hugo\n2.Emile Zola\n3.Marcel Proust\n",
@@ -19,29 +26,53 @@ for ($i = 0; $i < $NB_QUESTIONS; $i++) {
 
 
     if ($ce_que_utilisateur_repond === $reponses[$i]) {
-        echo "Bonne réponse + 10 points\n";
+        echo "Suspennnnce ! 
+
+Bien joué !
+
+*Le score augmente de  10*\n"  .$score."\n";
         $score += 10;
     } else {
-        echo "Mauvaise réponse, question suivante \n";
+        echo "Suspennnnce ! 
+
+NON ! 
+
+*Le score n'augemente pas. :(*
+
+################################################### 
+Score :\n" .$score.
+"###################################################
+ \n";
     }
 }
-
-echo "Ton score est de " . $score . " points \n";
-
-
-// il faut parler si user a un score au moins 50% il a gagné sinon il a perdu
-
-
-
-// $calcul = (15/50) * 100
 
 $calcul = ($score / 50) * 100;
 
 
 if ($calcul <= 25) {
 
-    echo "l'utilisateur a perdu \n";
+    echo "Tu as perdu dommage ! \n";
 } else {
 
-    echo "l'utilisateur a gagné\n";
+    echo "Bien joué tu as gagné des millions !\n";
 }
+
+
+
+echo "###################################################
+Score: \n" . $score . 
+ " points 
+################################################### 
+########### GAME OVER ###########\n";
+
+echo "Pourcentage de bonne réponse  :".$calcul."% \n";
+
+
+
+// $calcul = (15/50) * 100
+
+
+
+
+
+
