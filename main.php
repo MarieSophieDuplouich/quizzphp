@@ -18,6 +18,7 @@ Quelle est la couleur du cheval blanc d'Henri IV?\n1.Blanc\n2.Rouge\n3.Noir\n",
 $reponses = [1, 2, 3, 1, 3];
 $score = 0;
 
+
 $NB_QUESTIONS = count($questions);
 
 for ($i = 0; $i < $NB_QUESTIONS; $i++) {
@@ -26,18 +27,19 @@ for ($i = 0; $i < $NB_QUESTIONS; $i++) {
 
 
     if ($ce_que_utilisateur_repond === $reponses[$i]) {
-        echo "Suspennnnce ! 
-
+        echo "Suspennnnse ! 
+     var_dump($NB_QUESTIONS);
 Bien joué !
 
 *Le score augmente de  10*\n"  .$score."\n";
         $score += 10;
+      
     } else {
-        echo "Suspennnnce ! 
+        echo "Suspennnnse ! 
 
 NON ! 
 
-*Le score n'augemente pas. :(*
+*Le score n'augmente pas. :(*
 
 ################################################### 
 Score :".$score."\n".
@@ -46,7 +48,7 @@ Score :".$score."\n".
     }
 }
 
-$calcul = ($score / 50) * 100;
+$calcul = ($score / $NB_QUESTIONS * 10);
 
 
 if ($calcul <= 25) {
